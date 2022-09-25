@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Read </title>
+    <link rel="stylesheet" href="../css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <header class="ps-1 d-lg-flex justify-content-lg-center">
+            <h1> Read </h1>
+        </header>
+        <section>
+            <article class="px-1 pt-1">
+                <table class="table table-striped">
+                    <thead>
+                        <th scope="col"> Id </th>
+                        <th scope="col">
+                            <%= locals.col1 %>
+                        </th>
+                        <th scope="col">
+                            <%= locals.col2 %>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <% for (let x in locals.query) { let result=locals.query[x]%>
+                            <tr>
+                                <th scope="row">
+                                    <%= result['id'] %>
+                                </th>
+                                <td>
+                                    <%= result[col1] %>
+                                </td>
+                                <td>
+                                    <%= result[col2] %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </article>
+            <article class="container-fluid">
+                <div class="row px-1">
+                    <button type="button" class="btn btn-dark col-12 col-lg-auto" onclick="location.href='/'"> Back </button>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

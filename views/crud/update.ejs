@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Update </title>
+    <link rel="stylesheet" href="../css">
+</head>
+
+<body>
+    <header class="ps-1 d-lg-flex justify-content-lg-center">
+        <h1> Update </h1>
+    </header>
+    <main class="container-fluid">
+        <section class="row">
+            <article class="px-1">
+                <form class="form-group mb-3" method="post" action="./update">
+                    <label for="id"> ID </label>
+                    <input type="number" class="form-control" name="id">
+                    <label for="col1" class="mt-2">
+                        <%= locals.col1 %>
+                    </label>
+                    <input type="text" class="form-control" name="col1">
+                    <label for="col2" class="mt-2">
+                        <%= locals.col2 %>
+                    </label>
+                    <input type="number" class="form-control" name="col2">
+                    <input type="submit" class="btn btn-success mt-2" value="Update">
+                </form>
+            </article>
+            <article class="px-1">
+                <button type="button" class="btn btn-dark col-12 col-lg-auto" onclick="location.href='/'"> Back </button>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
